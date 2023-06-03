@@ -55,7 +55,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Post({ params }) {
+type Params = {
+  params: { slug: string; searchParams?: {} };
+};
+export default async function Post({ params }: Params) {
   console.log(params);
   const post = await getPost(`content/${params?.slug}.mdx`);
   const { date, title, description, slug } = post.frontmatter;
