@@ -56,8 +56,8 @@ export default async function Home() {
     <>
       <div>
         <p className="p-2 text-white font-medium text-3xl">
-          Welcome! My name is <b>Vinicius</b> and I've created this blog to
-          share some frontend development content
+          Welcome! My name is <b>Vinicius</b> and Ive created this blog to share
+          some frontend development content
         </p>
       </div>
       <span className=" p-4 text-white font-semibold text-4xl mt-6">
