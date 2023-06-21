@@ -54,12 +54,21 @@ export default async function Home() {
   const data = await getAllPosts();
   return (
     <>
+      <div>
+        <p className="p-2 text-white font-medium text-3xl">
+          Welcome! My name is <b>Vinicius</b> and I've created this blog to
+          share some frontend development content
+        </p>
+      </div>
+      <span className=" p-4 text-white font-semibold text-4xl mt-6">
+        Recent posts:
+      </span>
       {data?.map((post) => {
         const { date, title, description, slug, readTime, tags } =
           post.frontmatter;
         return (
           <Link
-            className="group relative flex h-fit w-full transition-transform duration-300 ease-in-out hover:scale-[1.02]"
+            className="group relative flex h-fit w-11/12 self-center transition-transform duration-300 ease-in-out hover:scale-[1.02]"
             key={title}
             href={`post/${slug}`}
           >
